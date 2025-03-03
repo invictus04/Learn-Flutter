@@ -389,8 +389,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       )
        */
-      /* Lecture - 11
 
+
+      /* Lecture - 11
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -430,7 +431,17 @@ class _MyHomePageState extends State<MyHomePage> {
       )
        */
 
+      /* Lecture - 12
+      Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Text('Hello World', style: TextStyle(fontSize: 35),),
+      )
 
+      Container(
+        color:  Colors.deepPurpleAccent,
+          margin: EdgeInsets.all(11),
+          child: Text('Hello Word', style: TextStyle(fontSize: 25, color: Colors.white ),))
+       */
 
     );
   }
