@@ -474,6 +474,21 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
      */
+
+      /* lecture 14
+      Center(
+        child: Card(
+          shadowColor: Colors.redAccent,
+          elevation: 12 ,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('Hello Flutter!!', style: TextStyle(fontSize: 25),),
+          ),
+        ),
+      )
+       */
+
+
     );
   }
 }
