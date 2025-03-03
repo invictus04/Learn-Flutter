@@ -443,6 +443,23 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Text('Hello Word', style: TextStyle(fontSize: 25, color: Colors.white ),))
        */
 
+      /* Lecture -13
+      ListView.separated(itemBuilder: (context, index){
+        return ListTile(
+          leading: Text('${index+1}'),
+          title: Text('${count[index]}'),
+          subtitle: Text('Number'),
+          trailing: Icon(Icons.add),
+        );
+      },
+        separatorBuilder: (context, index){
+        return Divider(thickness: 2, height: 2,);
+        },
+      itemCount: count.length,)
+       */
+
+
+
     );
   }
 }
