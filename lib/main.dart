@@ -440,13 +440,12 @@ class _MyHomePageState extends State<MyHomePage> {
       Container(
         color:  Colors.deepPurpleAccent,
           margin: EdgeInsets.all(11),
-          child: Text('Hello Word', style: TextStyle(fontSize: 25, color: Colors.white ),))
-       */
-
-      /* Lecture -13
-      ListView.separated(itemBuilder: (context, index){
-        return ListTile(
-          leading: Text('${index+1}'),
+          child: Text('Hello Word', style: TextStyle(fontSize: 25, color: Colors.white ),))Container(
+        child: CircleAvatar(
+          backgroundImage: AssetImage('assets/images/test_1.jpg'),
+          backgroundColor: Colors.redAccent,
+        ),
+      ) leading: Text('${index+1}'),
           title: Text('${count[index]}'),
           subtitle: Text('Number'),
           trailing: Icon(Icons.add),
@@ -458,6 +457,20 @@ class _MyHomePageState extends State<MyHomePage> {
       itemCount: count.length,)
        */
 
+
+      /* lecture -13
+      Container(
+        width: 100,
+        height: 100,
+        child: CircleAvatar(
+          child: Text('data'),
+          backgroundImage: AssetImage('assets/images/test_1.jpg'),
+          backgroundColor: Colors.redAccent,
+          maxRadius: 50,
+        ),
+      )
+
+       */
 
 
     );
