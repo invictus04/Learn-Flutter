@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fprojects/ui_helper/util.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +16,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        textTheme: TextTheme(
+          headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+          labelSmall: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w600,
+            fontStyle: FontStyle.italic,
+          ),
+        ),
       ),
       home: const MyHomePage(),
     );
@@ -31,12 +40,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var count = [1,2,3,4,5,6,7];
+    var count = [1, 2, 3, 4, 5, 6, 7];
 
     return Scaffold(
       appBar: AppBar(title: Text('container')),
       body:
-
       /* Lecture - 1
       Container(
         color: Colors.deepOrange,
@@ -44,7 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
         height: 300,
       )
        */
-
       /* Lecture - 2
       Text("first Text",
       style: TextStyle(
@@ -53,8 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
         color: Colors.blue,
       ),)
        */
-
-
       /* Lecture - 3
       Center(
         child: Container(
@@ -65,9 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
       )
 
        */
-
-
-      /* Lecture -4 
+      /* Lecture -4
       TextButton(onPressed: (){
         print("The Text Button");
       }, child: Text("Text Button")
@@ -76,7 +79,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ElevatedButton(onPressed: (){}, child: Text("This is Elevated button"))
       OutlinedButton(onPressed: (){}, child: Text('Outlined'))
        */
-
       /* Lecture - 5
       Center(
         child: Column(
@@ -93,7 +95,6 @@ class _MyHomePageState extends State<MyHomePage> {
       )
 
        */
-
       /* Lecture -6
       Center(
         child: Column(
@@ -156,7 +157,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       )
        */
-
       /* Lecture - 7
       Center(
         child: InkWell(
@@ -173,7 +173,6 @@ class _MyHomePageState extends State<MyHomePage> {
       )
 
        */
-
       /* Lecture - 8
        Padding(
          padding: const EdgeInsets.all(8.0),
@@ -325,7 +324,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       )
        */
-    
       /* Lecture- 9
       ListView(
         scrollDirection: Axis.horizontal,
@@ -358,8 +356,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
       )
       */
-
-
       /* Lecture - 10
       Container(
         width: double.infinity,
@@ -389,8 +385,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       )
        */
-
-
       /* Lecture - 11
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -431,6 +425,7 @@ class _MyHomePageState extends State<MyHomePage> {
       )
        */
 
+
       /* Lecture - 12
       Padding(
         padding: EdgeInsets.all(8.0),
@@ -456,8 +451,6 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       itemCount: count.length,)
        */
-
-
       /* lecture -13
       Container(
         width: 100,
@@ -472,7 +465,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
        */
 
+    /* Lecture 13
+      Column(
+        children: [
+          Text('Text 1', style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.red)),
+          Text('Text 2', style: Theme.of(context).textTheme.labelSmall),
+        ],
+      ),
 
+     */
     );
   }
 }
