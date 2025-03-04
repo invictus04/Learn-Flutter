@@ -38,6 +38,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var email = TextEditingController();
+  var password = TextEditingController();
   @override
   Widget build(BuildContext context) {
     var count = [1, 2, 3, 4, 5, 6, 7];
@@ -424,8 +426,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       )
        */
-
-
       /* Lecture - 12
       Padding(
         padding: EdgeInsets.all(8.0),
@@ -464,8 +464,7 @@ class _MyHomePageState extends State<MyHomePage> {
       )
 
        */
-
-    /* Lecture 13
+      /* Lecture 13
       Column(
         children: [
           Text('Text 1', style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.red)),
@@ -474,7 +473,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
      */
-
       /* lecture 14
       Center(
         child: Card(
@@ -486,6 +484,57 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       )
+       */
+
+      /* lecture -15
+      Center(
+        child: Container(
+          width: 300,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextField(
+                keyboardType: TextInputType.emailAddress,
+                controller: email,
+                decoration: InputDecoration(
+                  hintText: 'Enter email',
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(21),
+                    borderSide: BorderSide(color: Colors.deepOrange, width: 2),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(21),
+                    borderSide: BorderSide(color: Colors.yellow, width: 2),
+                  ),
+                  suffixIcon: IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye), color: Colors.deepOrange,),
+                  prefixIcon: Icon(Icons.email, color: Colors.deepOrange, ),
+
+                ),
+              ),
+              Container(height: 10),
+              TextField(
+                controller: password,
+                obscureText: true,
+
+                decoration: InputDecoration(
+                  hintText: "Enter password",
+                  suffixIcon: Icon(Icons.remove_red_eye, color: Colors.indigoAccent,),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(21),
+                    borderSide: BorderSide(color: Colors.deepOrange),
+                  ),
+                ),
+              ),
+              Container(height: 10),
+              ElevatedButton(onPressed: (){
+                String uemail = email.text;
+                String upass = password.text;
+                print( 'Email: $uemail' + 'Password: $upass');
+              }, child: Text('Submit', style: TextStyle(fontSize: 20),))
+            ],
+          ),
+        ),
+      ),
        */
 
 
