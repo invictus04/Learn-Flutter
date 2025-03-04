@@ -48,6 +48,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     var count = [1, 2, 3, 4, 5, 6, 7];
     var time = DateTime.now();
+    var arrColors = [
+      Colors.brown,
+      Colors.purpleAccent,
+      Colors.blueAccent,
+      Colors.cyanAccent,
+      Colors.deepPurple,
+      Colors.pink,
+      Colors.yellow,
+      Colors.deepOrange,
+      Colors.indigo,
+    ];
     return Scaffold(
       appBar: AppBar(title: Text('container')),
       body:
@@ -574,7 +585,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ))
 
        */
-
       /* lecture - 17
       Center(
         child: Column(
@@ -620,6 +630,64 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Pick time', style: TextStyle(fontSize: 25)),
             ),
           ],
+        ),
+      ),
+       */
+
+
+      /* lecture - 18
+      Column(
+        children: [
+          Container(
+            height: 200,
+            child: GridView.count(
+              crossAxisCount: 4,
+              crossAxisSpacing: 11,
+              mainAxisSpacing: 11,
+              children: [
+                Container(color: Colors.indigo),
+                Container(color: Colors.deepOrange),
+                Container(color: Colors.yellow),
+                Container(color: Colors.pink),
+                Container(color: Colors.deepPurple),
+                Container(color: Colors.cyanAccent),
+                Container(color: Colors.blueAccent),
+                Container(color: Colors.purpleAccent),
+                Container(color: Colors.brown),
+              ],
+            ),
+          ),
+          Container(height: 100,),
+          Container(
+            height: 400,
+            child: GridView.extent(maxCrossAxisExtent: 200,
+            crossAxisSpacing: 11,
+            mainAxisSpacing: 11,
+            children: [
+              Container(color: Colors.indigo),
+              Container(color: Colors.deepOrange),
+              Container(color: Colors.yellow),
+              Container(color: Colors.pink),
+              Container(color: Colors.deepPurple),
+              Container(color: Colors.cyanAccent),
+              Container(color: Colors.blueAccent),
+              Container(color: Colors.purpleAccent),
+              Container(color: Colors.brown)
+            ],),
+          )
+        ],
+      ),
+
+
+      GridView.builder(
+        itemBuilder: (context, index) {
+          return Container(color: arrColors[index]);
+        },
+        itemCount: arrColors.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
         ),
       ),
        */
