@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fprojects/ui_helper/util.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -554,6 +555,26 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ))
        */
+
+      /* lecture - 17
+      Center(child: Container(
+        width: 200,
+        height: 200,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('${DateFormat.yMMMMd('en_US').format(time)}', style: TextStyle(fontSize: 22),),
+            ElevatedButton(onPressed: (){
+              setState(() {
+
+              });
+            }, child: Text('Get Time', style: TextStyle(fontSize: 22),))
+          ],
+        ),
+      ))
+
+       */
+
 
 
     );
