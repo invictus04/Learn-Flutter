@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var count = [1, 2, 3, 4, 5, 6, 7];
-
+    var time = DateTime.now();
     return Scaffold(
       appBar: AppBar(title: Text('container')),
       body:
@@ -535,6 +535,24 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
+       */
+
+      /* lecture - 16
+        Center(child: Container(
+          width: 200,
+          height: 200,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('${time.second}', style: TextStyle(fontSize: 22),),
+              ElevatedButton(onPressed: (){
+                setState(() {
+
+                });
+              }, child: Text('Get Time', style: TextStyle(fontSize: 22),))
+            ],
+          ),
+        ))
        */
 
 
