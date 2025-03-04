@@ -41,6 +41,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   var email = TextEditingController();
   var password = TextEditingController();
+  DateTime? selectedDate;
+  TimeOfDay? timeOfDay;
+
   @override
   Widget build(BuildContext context) {
     var count = [1, 2, 3, 4, 5, 6, 7];
@@ -486,7 +489,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       )
        */
-
       /* lecture -15
       Center(
         child: Container(
@@ -537,7 +539,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
        */
-
       /* lecture - 16
         Center(child: Container(
           width: 200,
@@ -555,7 +556,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ))
        */
-
       /* lecture - 17
       Center(child: Container(
         width: 200,
@@ -575,6 +575,54 @@ class _MyHomePageState extends State<MyHomePage> {
 
        */
 
+      /* lecture - 17
+      Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '${selectedDate?.day}/${selectedDate?.month}/${selectedDate?.year}',
+              style: TextStyle(fontSize: 25),
+            ),
+            Container(height: 12),
+            ElevatedButton(
+              onPressed: () async {
+                DateTime? datePicked = await showDatePicker(
+                  context: context,
+                  initialDate: DateTime.now(),
+                  firstDate: DateTime(2020),
+                  lastDate: DateTime(2040),
+                );
+                if (datePicked != null) {
+                  setState(() {
+                    selectedDate = datePicked;
+                  });
+                }
+              },
+              child: Text('Change', style: TextStyle(fontSize: 25)),
+            ),
+            Container(height: 12),
+            Text('${timeOfDay?.hour}: ${timeOfDay?.minute}', style: TextStyle(fontSize: 25)),
+            Container(height: 12),
+            ElevatedButton(
+              onPressed: () async {
+                TimeOfDay? timePicked = await showTimePicker(
+                  context: context,
+                  initialTime: TimeOfDay.now(),
+                  initialEntryMode: TimePickerEntryMode.input,
+                );
+                if (timePicked != null) {
+                  setState(() {
+                    timeOfDay = timePicked;
+                  });
+                }
+              },
+              child: Text('Pick time', style: TextStyle(fontSize: 25)),
+            ),
+          ],
+        ),
+      ),
+       */
 
 
     );
