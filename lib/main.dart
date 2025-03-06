@@ -754,11 +754,39 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
      */
+      /* lecture -23
+      Container(
+        width: 300,
+        height: 300,
+        child: Stack(
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.purpleAccent,
+            ),
+            Positioned(
+              left: 21,
+              right: 21,
+              bottom: 21,
+              top: 21,
+              child: Container(
+                width: 200,
+                height: 200,
+                color: Colors.redAccent,
+              ),
+            )
+          ],
+        ),
+      )
+
+       */
+
     );
   }
 }
 
-/*
+/* lecture - 22
 class topItems extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -781,7 +809,8 @@ class topItems extends StatelessWidget{
       ),
     );
   }
+ }
  */
 
 
-}
+
