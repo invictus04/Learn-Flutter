@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fprojects/ui_helper/util.dart';
 import 'package:intl/intl.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -869,8 +870,14 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.purpleAccent,
         ),
       ),
+       */
+
+      /* lecture - 28
+      FaIcon(FontAwesomeIcons.amazon, size: 100, color: Colors.deepOrange),
 
        */
+
+
     );
   }
 }
