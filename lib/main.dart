@@ -700,8 +700,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
        */
-
-    /* lecture - 22
+      /* lecture - 22
       Container(
         child: Column(
           children: [
@@ -822,7 +821,6 @@ class _MyHomePageState extends State<MyHomePage> {
       )
 
        */
-
       /* lecture - 25
       Center(
         child: SizedBox.square(
@@ -831,7 +829,38 @@ class _MyHomePageState extends State<MyHomePage> {
       )
 
        */
+      /* lecture - 26
+      RichText(
+        text: TextSpan(
+          style: TextStyle(color: Colors.grey, fontSize: 21),
+          children: [
+            TextSpan(text: 'Hello '),
+            TextSpan(
+              text: 'World',
+              style: TextStyle(
+                fontSize: 34,
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            TextSpan(
+              text: ' Welcome to '
+            ),
+            TextSpan(
+              text: 'Flutter',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 43,
+                color: Colors.deepOrange,
+                fontStyle: FontStyle.italic,
+              )
 
+            )
+          ],
+        ),
+      ),
+
+       */
 
 
     );
@@ -863,6 +892,3 @@ class topItems extends StatelessWidget{
   }
  }
  */
-
-
-
