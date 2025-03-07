@@ -823,6 +823,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
        */
 
+      /* lecture - 25
+      Center(
+        child: SizedBox.square(
+          child: ElevatedButton(onPressed: (){}, child: Text('Click me')),
+        ),
+      )
+
+       */
+
 
 
     );
