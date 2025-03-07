@@ -861,8 +861,16 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
        */
+      /* lecture - 27
+      Center(
+        child: Icon(
+          Icons.accessibility_sharp,
+          size: 100,
+          color: Colors.purpleAccent,
+        ),
+      ),
 
-
+       */
     );
   }
 }
