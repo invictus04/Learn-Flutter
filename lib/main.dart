@@ -781,6 +781,49 @@ class _MyHomePageState extends State<MyHomePage> {
       )
 
        */
+      /* lecture - 24
+      Wrap(
+        direction: Axis.horizontal,
+        alignment: WrapAlignment.center,
+        spacing: 11,
+        runSpacing: 11,
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.purpleAccent,
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.redAccent,
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.blue,
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.pinkAccent,
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.lightGreenAccent,
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.brown,
+          ),
+        ],
+      )
+
+       */
+
+
 
     );
   }
