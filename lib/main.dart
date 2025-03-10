@@ -873,11 +873,30 @@ class _MyHomePageState extends State<MyHomePage> {
        */
 
       /* lecture - 28
-      FaIcon(FontAwesomeIcons.amazon, size: 100, color: Colors.deepOrange),
-
+      FaIcon(FontAwesomeIcons.amazon, size: 100, color: Colors.deepOrange)
        */
 
+      /* lecture - 29
+      Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.brown,
+        child: Stack(
+          children: [
+            Positioned(
+              bottom: 11,
+              right: 11,
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.white,
+              ),
+            )
+          ],
 
+        ),
+      )
+       */
     );
   }
 }
