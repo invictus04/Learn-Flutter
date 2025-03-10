@@ -44,6 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
   var password = TextEditingController();
   DateTime? selectedDate;
   TimeOfDay? timeOfDay;
+  var no1Controller = TextEditingController();
+  var no2Controller = TextEditingController();
+  var result = "";
 
   callBack() {
     print('Clicked!!');
@@ -64,6 +67,9 @@ class _MyHomePageState extends State<MyHomePage> {
       Colors.deepOrange,
       Colors.indigo,
     ];
+
+
+
     return Scaffold(
       appBar: AppBar(title: Text('container')),
       body:
@@ -871,11 +877,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
        */
-
       /* lecture - 28
       FaIcon(FontAwesomeIcons.amazon, size: 100, color: Colors.deepOrange)
        */
-
       /* lecture - 29
       Container(
         width: double.infinity,
@@ -896,6 +900,90 @@ class _MyHomePageState extends State<MyHomePage> {
 
         ),
       )
+       */
+      /* lecture - 30
+      Container(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(11.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextField(
+                  controller: no1Controller,
+                  keyboardType: TextInputType.number,
+                ),
+                TextField(
+                  controller: no2Controller,
+                  keyboardType: TextInputType.number,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(21.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton(onPressed: () {
+                        var num1 = int.parse(no1Controller.text.toString());
+                        var num2 = int.parse(no2Controller.text.toString());
+
+                        var sum = num1+num2;
+                        result = "The sum of $num1 and $num2 is $sum";
+
+                        setState(() {
+
+                        });
+
+                      }, child: Text('Add')),
+                      ElevatedButton(onPressed: () {
+                        var num1 = int.parse(no1Controller.text.toString());
+                        var num2 = int.parse(no2Controller.text.toString());
+
+                        var sum = num1-num2;
+                        result = "The diff of $num1 and $num2 is $sum";
+
+                        setState(() {
+
+                        });
+
+                      }, child: Text('Sub')),
+                      ElevatedButton(onPressed: () {
+                        var num1 = int.parse(no1Controller.text.toString());
+                        var num2 = int.parse(no2Controller.text.toString());
+
+                        var sum = num1*num2;
+                        result = "The Multiplication of $num1 and $num2 is $sum";
+
+                        setState(() {
+
+                        });
+
+                      }, child: Text('Multiply')),
+                      ElevatedButton(onPressed: () {
+                        var num1 = int.parse(no1Controller.text.toString());
+                        var num2 = int.parse(no2Controller.text.toString());
+                        if(num2 == 0){
+                          result = "Cannot divide";
+                        } else {
+                        var sum = num1/num2;
+                        result = "The division of $num1 and $num2 is ${sum.toStringAsFixed(2)}";
+                        }
+
+                        setState(() {
+
+                        });
+                      }, child: Text('Div')),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(11.0),
+                  child: Text(result, style: TextStyle(fontSize: 25, color: Colors.brown)),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
        */
 
 
