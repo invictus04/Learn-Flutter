@@ -897,6 +897,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       )
        */
+
+
     );
   }
 }
@@ -925,4 +927,35 @@ class topItems extends StatelessWidget{
     );
   }
  }
+ */
+
+/* lecture - 30
+class MyTestPageStateless extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      color: Colors.deepOrange,
+    );
+  }
+
+}
+
+class MyTestPageStatefull extends StatefulWidget{
+
+  @override
+  State<StatefulWidget> createState() {
+    return MyTestPageStatefullState();
+  }
+}
+
+class MyTestPageStatefullState extends State<MyTestPageStatefull>{
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+
+}
  */
