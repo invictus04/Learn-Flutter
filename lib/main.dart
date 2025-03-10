@@ -47,6 +47,36 @@ class _MyHomePageState extends State<MyHomePage> {
   var no1Controller = TextEditingController();
   var no2Controller = TextEditingController();
   var result = "";
+  var arrData = [
+    'ram ji',
+    'shyam',
+    'chintu',
+    'pintu',
+    'abhinav',
+    'shiker',
+    'abhishek',
+    'mayank',
+    'neelesh',
+    'prakhar',
+    'poshak',
+    'prabhanshu',
+    'raj',
+    'hanuman ji',
+    'pavanputra',
+  ];
+
+  var arrjData = [
+    {'name': 'Ram ji', 'mobno': '7894561230', 'unread': '2'},
+    {'name': 'sHYAM', 'mobno': '7894561230', 'unread': '2'},
+    {'name': 'Hanuman ji', 'mobno': '7894561230', 'unread': '2'},
+    {'name': 'Pavanputra', 'mobno': '7894561230', 'unread': '2'},
+    {'name': 'Ganesh ji', 'mobno': '7894561230', 'unread': '2'},
+    {'name': 'Shankar ji', 'mobno': '7894561230', 'unread': '2'},
+    {'name': 'Bholenath', 'mobno': '7894561230', 'unread': '2'},
+    {'name': 'mahakal', 'mobno': '7894561230', 'unread': '2'},
+    {'name': 'Bhairav ji', 'mobno': '7894561230', 'unread': '2'},
+    {'name': 'kali maa', 'mobno': '7894561230', 'unread': '2'},
+  ];
 
   callBack() {
     print('Clicked!!');
@@ -67,8 +97,6 @@ class _MyHomePageState extends State<MyHomePage> {
       Colors.deepOrange,
       Colors.indigo,
     ];
-
-
 
     return Scaffold(
       appBar: AppBar(title: Text('container')),
@@ -901,7 +929,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       )
        */
-      /* lecture - 30
+      /* lecture - 31
       Container(
         child: Center(
           child: Padding(
@@ -985,7 +1013,53 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
        */
+      /* lecture 32
+      ListView (
+        children:
+            arrData
+                .map(
+                  (value) => Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade300,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Center(
+                        child: Text(
+                          value,
+                          style: TextStyle(fontSize: 32, color: Colors.black38),
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+                .toList(),
+      ),
 
+      ListView(
+        children:
+            arrjData
+                .map(
+                  (value) => ListTile(
+                    leading: Icon(Icons.account_circle_outlined, size: 25.0),
+                    title: Text(
+                      value['name'].toString(),
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    subtitle: Text(
+                      value['mobno'].toString(),
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    trailing: Text(
+                      value['unread'].toString(),
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                )
+                .toList(),
+      ),
+      */
 
     );
   }
