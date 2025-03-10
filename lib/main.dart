@@ -1060,7 +1060,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 .toList(),
       ),
       */
-
+      /* lecture -33
+      ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: 200, maxHeight: 100),
+        child: Text(
+          'Constraint Box check out Constraint Box check out Constraint Box check out',
+          style: TextStyle(fontSize: 21, overflow: TextOverflow.fade),
+        ),
+      ),
+       */
+      Container()
     );
   }
 }
