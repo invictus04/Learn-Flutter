@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fprojects/Intro.dart';
+import 'package:fprojects/splash_screen.dart';
 import 'package:fprojects/ui_helper/util.dart';
 import 'package:intl/intl.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: IntroPage(),
+      home: SplashScreen(),
     );
   }
 }
@@ -1075,6 +1076,8 @@ class _MyHomePageState extends State<MyHomePage> {
       Center( child: Text('This is home page'))
 
        */
+
+      Container()
     );
   }
 }
