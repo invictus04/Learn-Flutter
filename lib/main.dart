@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: SplashScreen(),
+      home: MyHomePage(),
     );
   }
 }
@@ -83,8 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
   callBack() {
     print('Clicked!!');
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -1073,13 +1071,24 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
        */
-
       /* lecture - 34
       Center( child: Text('This is home page'))
 
        */
+      /*
+      Center(
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(21),
+          child: Image.asset(
+            'assets/images/test_1.jpg',
+            width: 400,
+            height: 200,
+            fit: BoxFit.fill,
+          ),
+        ),
+      ),
 
-      Container()
+       */
     );
   }
 }
