@@ -88,6 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
   var _height = 100.0;
   var flag = true;
   Color _color = Colors.purpleAccent;
+  var _opacity = 1.0;
 
   @override
   Widget build(BuildContext context) {
@@ -1094,7 +1095,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
        */
-
       /* lecture = 38
       Center(
         child: Column(
@@ -1131,7 +1131,36 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
        */
-
+      /* lecture - 39
+      Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedOpacity(
+              opacity: _opacity,
+              duration: Duration(seconds: 2),
+              curve: Curves.decelerate,
+              child: Container(width: 200, height: 100, color: Colors.red),
+            ),
+            SizedBox(height: 15),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  if (flag) {
+                    _opacity = 0.0;
+                    flag = false;
+                  } else {
+                    _opacity = 1.0;
+                    flag = true;
+                  }
+                });
+              },
+              child: Text('Change'),
+            ),
+          ],
+        ),
+      ),
+       */
     );
   }
 }
