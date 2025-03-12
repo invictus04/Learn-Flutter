@@ -84,6 +84,11 @@ class _MyHomePageState extends State<MyHomePage> {
     print('Clicked!!');
   }
 
+  var _width = 200.0;
+  var _height = 100.0;
+  var flag = true;
+  Color _color = Colors.purpleAccent;
+
   @override
   Widget build(BuildContext context) {
     var count = [1, 2, 3, 4, 5, 6, 7];
@@ -1075,7 +1080,7 @@ class _MyHomePageState extends State<MyHomePage> {
       Center( child: Text('This is home page'))
 
        */
-      /*
+      /* lecture - 37
       Center(
         child: ClipRRect(
           borderRadius: BorderRadius.circular(21),
@@ -1089,6 +1094,44 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
        */
+
+      /* lecture = 38
+      Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedContainer(
+              color: _color,
+              width: _width,
+              height: _height,
+              curve: Curves.easeOut,
+              duration: Duration(seconds: 1),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  if (flag) {
+                    _width = 100.0;
+                    _height = 200.0;
+                    _color = Colors.blue;
+                    flag = false;
+                  } else {
+                    _width = 200.0;
+                    _height = 100.0;
+                    _color = Colors.purple;
+                    flag = true;
+                  }
+                });
+              },
+              child: Text('Animate'),
+            ),
+          ],
+        ),
+      ),
+
+       */
+
     );
   }
 }
