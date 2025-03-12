@@ -89,6 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
   var flag = true;
   Color _color = Colors.purpleAccent;
   var _opacity = 1.0;
+  CrossFadeState crossFadeState = CrossFadeState.showFirst;
 
   @override
   Widget build(BuildContext context) {
@@ -1160,6 +1161,48 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+       */
+
+      /*
+      Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedCrossFade(
+              firstChild: Container(
+                width: 200,
+                height: 200,
+                color: Colors.purple.shade300,
+              ),
+              secondChild: Image.asset(
+                'assets/images/test_2.jpg',
+                width: 200,
+                height: 300,
+              ),
+              crossFadeState: crossFadeState,
+              firstCurve: Curves.easeIn,
+              secondCurve: Curves.easeOut,
+              duration: Duration(seconds: 2),
+            ),
+            SizedBox(height: 12),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  if (flag) {
+                    crossFadeState = CrossFadeState.showSecond;
+                    flag = false;
+                  } else {
+                    crossFadeState = CrossFadeState.showFirst;
+                    flag = true;
+                  }
+                });
+              },
+              child: Text('Animate'),
+            ),
+          ],
+        ),
+      ),
+
        */
     );
   }
