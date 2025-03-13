@@ -4,6 +4,7 @@ import 'package:fprojects/splash_screen.dart';
 import 'package:fprojects/ui_helper/util.dart';
 import 'package:intl/intl.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,7 +42,7 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
+class _MyHomePageState extends State<MyHomePage> {
   var email = TextEditingController();
   var password = TextEditingController();
   DateTime? selectedDate;
@@ -108,7 +109,16 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   Color _color = Colors.purpleAccent;
   var _opacity = 1.0;
   CrossFadeState crossFadeState = CrossFadeState.showFirst;
+  String emailValue = "No email";
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getValue();
+  }
+
+  /*
   late Animation animation;
   late AnimationController animationController;
 
@@ -118,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     super.initState();
     animationController = AnimationController(vsync: this, duration: Duration(seconds: 4));
     animation = Tween(begin: 0.0, end: 200.0).animate(animationController);
-    
+
     animationController.addListener(() {
       print(animation.value);
       setState(() {
@@ -128,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     animationController.forward();
   }
 
-
+ */
 
   @override
   Widget build(BuildContext context) {
@@ -1242,12 +1252,51 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       ),
 
        */
+      /* lecture - 42
       Container(
         width: animation.value,
         height: animation.value,
         color: Colors.purple,
       )
+
+       */
+      Center(
+        child: Container(
+          width: 200,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextField(
+                controller: email,
+                decoration: InputDecoration(
+                  label: Text('email'),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+              SizedBox(height: 11),
+              ElevatedButton(onPressed: () async {
+                var _email = email.text.toString();
+                var pref = await SharedPreferences.getInstance();
+                pref.setString("email", _email);
+              }, child: Text('Save')),
+              SizedBox(height: 11),
+              Text(emailValue),
+            ],
+          ),
+        ),
+      ),
     );
+  }
+
+  void getValue() async{
+    var pref = await SharedPreferences.getInstance();
+    String getEmail = pref.get('email').toString();
+    emailValue = getEmail != null? getEmail : "no value fetched";
+    setState(() {
+
+    });
   }
 }
 
