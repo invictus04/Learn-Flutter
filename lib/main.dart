@@ -41,7 +41,7 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
   var email = TextEditingController();
   var password = TextEditingController();
   DateTime? selectedDate;
@@ -108,6 +108,27 @@ class _MyHomePageState extends State<MyHomePage> {
   Color _color = Colors.purpleAccent;
   var _opacity = 1.0;
   CrossFadeState crossFadeState = CrossFadeState.showFirst;
+
+  late Animation animation;
+  late AnimationController animationController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    animationController = AnimationController(vsync: this, duration: Duration(seconds: 4));
+    animation = Tween(begin: 0.0, end: 200.0).animate(animationController);
+    
+    animationController.addListener(() {
+      print(animation.value);
+      setState(() {
+
+      });
+    });
+    animationController.forward();
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -1221,6 +1242,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
        */
+      Container(
+        width: animation.value,
+        height: animation.value,
+        color: Colors.purple,
+      )
     );
   }
 }
