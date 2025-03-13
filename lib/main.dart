@@ -67,6 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
     'pavanputra',
   ];
 
+  var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
   var arrjData = [
     {'name': 'Ram ji', 'mobno': '7894561230', 'unread': '2'},
     {'name': 'sHYAM', 'mobno': '7894561230', 'unread': '2'},
@@ -78,6 +80,22 @@ class _MyHomePageState extends State<MyHomePage> {
     {'name': 'mahakal', 'mobno': '7894561230', 'unread': '2'},
     {'name': 'Bhairav ji', 'mobno': '7894561230', 'unread': '2'},
     {'name': 'kali maa', 'mobno': '7894561230', 'unread': '2'},
+  ];
+
+  var arrColors = [
+    Colors.brown,
+    Colors.purpleAccent,
+    Colors.blueAccent,
+    Colors.cyanAccent,
+    Colors.deepPurple,
+    Colors.pink,
+    Colors.yellow,
+    Colors.deepOrange,
+    Colors.indigo,
+    Colors.purple,
+    Colors.black38,
+    Colors.black,
+    Colors.lightGreenAccent,
   ];
 
   callBack() {
@@ -95,17 +113,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     var count = [1, 2, 3, 4, 5, 6, 7];
     var time = DateTime.now();
-    var arrColors = [
-      Colors.brown,
-      Colors.purpleAccent,
-      Colors.blueAccent,
-      Colors.cyanAccent,
-      Colors.deepPurple,
-      Colors.pink,
-      Colors.yellow,
-      Colors.deepOrange,
-      Colors.indigo,
-    ];
 
     return Scaffold(
       appBar: AppBar(title: Text('container')),
@@ -1162,8 +1169,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
        */
-
-      /*
+      /* lecture - 40
       Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -1201,6 +1207,17 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
+      ),
+       */
+      /* lecture 41
+      ListWheelScrollView(
+        itemExtent: 100,
+        children:
+            arrColors
+                .asMap()
+                .entries
+                .map((entry) => Container(width: 300, color: entry.value))
+                .toList(),
       ),
 
        */
